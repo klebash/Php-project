@@ -1,0 +1,51 @@
+h1{
+    text-align: center;
+    font-family: 'Limelight', cursive;
+}
+
+body{
+    background-color: #EEA47FFF;
+    text-align: center;
+}
+
+div{
+    text-align: left;
+    font-family: 'Prompt', sans-serif;
+}
+
+p{
+    font-family: 'Prompt', sans-serif;
+}
+
+.container{
+    display: grid;
+    grid-template-rows:  [row1]1fr  ;
+    grid-template-columns: [colum1]1fr [colum2]1fr;
+    
+
+    grid-template-areas: 
+    "photo theform";
+}
+
+.itema{
+    grid-area: theform;
+    justify-items: left;
+}
+
+.itemb{
+    grid-area: photo;
+    justify-self: center;
+}
+
+@media screen and  (max-width: 600px) {
+    .container{
+        display: grid;
+        grid-template-rows:   1fr 1fr;
+        grid-template-columns: 1fr;
+    
+    
+        grid-template-areas:
+           "photo"
+           "theform";
+    }
+}
